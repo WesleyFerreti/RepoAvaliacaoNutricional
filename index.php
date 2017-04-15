@@ -10,8 +10,8 @@
         echo "teste";
         echo "outro teste adicionando linha";
         echo "Adicionado via githut";
-        echo "adição no meio";
-        echo "Adição linha 14"
+        echo "Adição no meio via netbeans";
+        echo "Adição linha 14";
         echo "Adição da lnha 13";
         ?>
     </body>
