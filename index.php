@@ -9,6 +9,7 @@
         <?php
         echo "teste";
         echo "outro teste adicionando linha";
+        echo "Adicionado via githut";
         ?>
     </body>
 </html>
