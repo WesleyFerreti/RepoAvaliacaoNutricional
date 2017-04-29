@@ -1,8 +1,9 @@
 <?php
-require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/FormularioTriagem.php');
-require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Paciente.php');
-require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/OrientacoesNutricionais.php');
-require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Pessoa.php');
+//require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/FormularioTriagem.php');
+//require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Paciente.php');
+//require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/OrientacoesNutricionais.php');
+require_once('Pessoa.php');
+require_once('conexaoDB.php');
 
 /**
  * @access public
@@ -10,6 +11,7 @@ require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Pess
  * @package AvaliacaoNutricionalCLASSES
  */
 class Nutricionista extends Pessoa {
+    
 	/**
 	 * @AttributeType string
 	 */
@@ -59,8 +61,10 @@ class Nutricionista extends Pessoa {
 	/**
 	 * @access public
 	 */
-	public function Visualizar() {
+	public function Visualizar($db) {
 		// Not yet implemented
+        $array = $db->Query("SELECT * FROM `nutricionista`");
+        print_r($array);
 	}
 
 	/**

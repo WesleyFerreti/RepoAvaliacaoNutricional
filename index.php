@@ -7,12 +7,12 @@
     </head>
     <body>
         <?php
-        echo "teste";
-        echo "outro teste adicionando linha";
-        echo "Adicionado via githut";
-        echo "Adição no meio via netbeans";
-        echo "Adição linha 14";
-        echo "Adição da lnha 13";
+        require_once './ConexaoDB.php';
+        require_once './Nutricionista.php';
+        $db = new Conexao("localhost", "root", "", "avaliacaonutricional", 3306);
+        $n1 = new Nutricionista();
+        
+        $n1->Visualizar($db);
         ?>
     </body>
 </html>
