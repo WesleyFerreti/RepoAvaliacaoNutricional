@@ -39,10 +39,9 @@ class Database {
     }
 
     public function doQuery($sql){
-        echo $sql = 
-        $this->result = mysqli_query($this->connection, $sql);
         
-        //$this->result->num_rows;
+        $this->result = mysqli_query($this->connection, $sql);
+       
         
     }
     
