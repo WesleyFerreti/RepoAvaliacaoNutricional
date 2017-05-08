@@ -1,5 +1,5 @@
 <?php
-echo "blabla";
+echo "Dennis";
 /* s
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
