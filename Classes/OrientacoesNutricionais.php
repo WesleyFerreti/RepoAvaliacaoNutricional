@@ -1,6 +1,6 @@
 <?php
-require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Paciente.php');
-require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Nutricionista.php');
+//require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Paciente.php');
+//require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Nutricionista.php');
 
 /**
  * @access public
@@ -11,25 +11,25 @@ class OrientacoesNutricionais {
 	/**
 	 * @AttributeType string
 	 */
-	private $_nome;
+	public $nome;
 	/**
 	 * @AttributeType string
 	 */
-	private $_orientacao;
+	public $orientacao;
 	/**
 	 * @AttributeType string
 	 */
-	private $_data;
+	public $data;
 	/**
 	 * @AssociationType AvaliacaoNutricionalCLASSES.Paciente
 	 * @AssociationMultiplicity 1..*
 	 */
-	public $_possui = array();
+	//public $possui = array();
 	/**
 	 * @AssociationType AvaliacaoNutricionalCLASSES.Nutricionista
 	 * @AssociationMultiplicity 1
 	 */
-	public $_faz;
+	//public $faz;
 
 	/**
 	 * @access public
@@ -86,18 +86,18 @@ class OrientacoesNutricionais {
 	 * @ReturnType string
 	 */
 	public function getNome() {
-		return $this->_nome;
+		return $this->nome;
 	}
 
 	/**
 	 * @access public
-	 * @param string aNome
+	 * @param string nome
 	 * @return void
-	 * @ParamType aNome string
+	 * @ParamType nome string
 	 * @ReturnType void
 	 */
-	public function setNome($aNome) {
-		$this->_nome = $aNome;
+	public function setNome($nome) {
+		$this->nome = $nome;
 	}
 
 	/**
@@ -106,18 +106,18 @@ class OrientacoesNutricionais {
 	 * @ReturnType string
 	 */
 	public function getOrientacao() {
-		return $this->_orientacao;
+		return $this->orientacao;
 	}
 
 	/**
 	 * @access public
-	 * @param string aOrientacao
+	 * @param string orientacao
 	 * @return void
-	 * @ParamType aOrientacao string
+	 * @ParamType orientacao string
 	 * @ReturnType void
 	 */
-	public function setOrientacao($aOrientacao) {
-		$this->_orientacao = $aOrientacao;
+	public function setOrientacao($orientacao) {
+		$this->orientacao = $orientacao;
 	}
 
 	/**
@@ -126,18 +126,18 @@ class OrientacoesNutricionais {
 	 * @ReturnType string
 	 */
 	public function getData() {
-		return $this->_data;
+		return $this->data;
 	}
 
 	/**
 	 * @access public
-	 * @param string aData
+	 * @param string data
 	 * @return void
-	 * @ParamType aData string
+	 * @ParamType data string
 	 * @ReturnType void
 	 */
-	public function setData($aData) {
-		$this->_data = $aData;
+	public function setData($data) {
+		$this->data = $data;
 	}
 }
 ?>

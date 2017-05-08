@@ -1,25 +1,25 @@
 <?php
-require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/PrescricaoDietetica.php');
+//require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/PrescricaoDietetica.php');
 
 /**
  * @access public
  * @author Wesley Ferreti
  * @package AvaliacaoNutricionalCLASSES
  */
-class Dieta {
+class ViaAlimentacao {
 	/**
 	 * @AttributeType string
 	 */
-	private $_tipoDieta;
+	public $tipoVia;
 	/**
 	 * @AttributeType string
 	 */
-	private $_descricao;
+	public $descricao;
 	/**
 	 * @AssociationType AvaliacaoNutricionalCLASSES.PrescricaoDietetica
 	 * @AssociationMultiplicity 1..*
 	 */
-	public $_tem = array();
+	//public $tem = array();
 
 	/**
 	 * @access public
@@ -54,19 +54,19 @@ class Dieta {
 	 * @return string
 	 * @ReturnType string
 	 */
-	public function getTipoDieta() {
-		return $this->_tipoDieta;
+	public function getTipoVia() {
+		return $this->tipoVia;
 	}
 
 	/**
 	 * @access public
-	 * @param string aTipoDieta
+	 * @param string tipoVia
 	 * @return void
-	 * @ParamType aTipoDieta string
+	 * @ParamType tipoVia string
 	 * @ReturnType void
 	 */
-	public function setTipoDieta($aTipoDieta) {
-		$this->_tipoDieta = $aTipoDieta;
+	public function setTipoVia($tipoVia) {
+		$this->tipoVia = $tipoVia;
 	}
 
 	/**
@@ -75,18 +75,18 @@ class Dieta {
 	 * @ReturnType string
 	 */
 	public function getDescricao() {
-		return $this->_descricao;
+		return $this->descricao;
 	}
 
 	/**
 	 * @access public
-	 * @param string aDescricao
+	 * @param string descricao
 	 * @return void
-	 * @ParamType aDescricao string
+	 * @ParamType descricao string
 	 * @ReturnType void
 	 */
-	public function setDescricao($aDescricao) {
-		$this->_descricao = $aDescricao;
+	public function setDescricao($descricao) {
+		$this->descricao = $descricao;
 	}
 }
 ?>

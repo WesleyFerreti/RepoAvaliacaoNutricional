@@ -1,7 +1,7 @@
 <?php
-require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Nutricionista.php');
-require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Endereco.php');
-require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Pessoa.php');
+//require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Nutricionista.php');
+//require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Endereco.php');
+//require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Pessoa.php');
 
 /**
  * @access public
@@ -12,25 +12,25 @@ class Paciente extends Pessoa {
 	/**
 	 * @AttributeType boolean
 	 */
-	private $_inativo;
+	public $inativo;
 	/**
 	 * @AttributeType boolean
 	 */
-	private $_arquivado;
+	public $arquivado;
 	/**
 	 * @AttributeType string
 	 */
-	private $_diagnostico;
+	public $diagnostico;
 	/**
 	 * @AssociationType AvaliacaoNutricionalCLASSES.Nutricionista
 	 * @AssociationMultiplicity 1..*
 	 */
-	public $_tem = array();
+	//public $tem = array();
 	/**
 	 * @AssociationType AvaliacaoNutricionalCLASSES.Endereco
 	 * @AssociationMultiplicity 1..*
 	 */
-	public $_possui = array();
+	//public $possui = array();
 
 	/**
 	 * @access public
@@ -94,18 +94,18 @@ class Paciente extends Pessoa {
 	 * @ReturnType boolean
 	 */
 	public function getInativo() {
-		return $this->_inativo;
+		return $this->inativo;
 	}
 
 	/**
 	 * @access public
-	 * @param boolean aInativo
+	 * @param boolean inativo
 	 * @return void
-	 * @ParamType aInativo boolean
+	 * @ParamType inativo boolean
 	 * @ReturnType void
 	 */
-	public function setInativo($aInativo) {
-		$this->_inativo = $aInativo;
+	public function setInativo($inativo) {
+		$this->inativo = $inativo;
 	}
 
 	/**
@@ -114,18 +114,18 @@ class Paciente extends Pessoa {
 	 * @ReturnType boolean
 	 */
 	public function getArquivado() {
-		return $this->_arquivado;
+		return $this->arquivado;
 	}
 
 	/**
 	 * @access public
-	 * @param boolean aArquivado
+	 * @param boolean arquivado
 	 * @return void
-	 * @ParamType aArquivado boolean
+	 * @ParamType arquivado boolean
 	 * @ReturnType void
 	 */
-	public function setArquivado($aArquivado) {
-		$this->_arquivado = $aArquivado;
+	public function setArquivado($arquivado) {
+		$this->arquivado = $arquivado;
 	}
 
 	/**
@@ -134,18 +134,18 @@ class Paciente extends Pessoa {
 	 * @ReturnType string
 	 */
 	public function getDiagnostico() {
-		return $this->_diagnostico;
+		return $this->diagnostico;
 	}
 
 	/**
 	 * @access public
-	 * @param string aDiagnostico
+	 * @param string diagnostico
 	 * @return void
-	 * @ParamType aDiagnostico string
+	 * @ParamType diagnostico string
 	 * @ReturnType void
 	 */
-	public function setDiagnostico($aDiagnostico) {
-		$this->_diagnostico = $aDiagnostico;
+	public function setDiagnostico($diagnostico) {
+		$this->diagnostico = $diagnostico;
 	}
 }
 ?>

@@ -1,6 +1,6 @@
 <?php
-require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Paciente.php');
-require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/MembroAputado.php');
+//require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Paciente.php');
+//require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/MembroAmputado.php');
 
 /**
  * @access public
@@ -11,53 +11,53 @@ class AvaliacaoAntropometrica {
 	/**
 	 * @AttributeType double
 	 */
-	private $_altura;
+        public $altura;
 	/**
 	 * @AttributeType double
 	 */
-	private $_peso;
+        public $peso;
 	/**
 	 * @AttributeType double
 	 */
-	private $_cbAferida;
+        public $cbAferida;
 	/**
 	 * @AttributeType string
 	 */
-	private $_cbClas;
+        public $cbClas;
 	/**
 	 * @AttributeType boolean
 	 */
-	private $_amputado;
+        public $amputado;
 	/**
 	 * @AttributeType boolean
 	 */
-	private $_acamado;
+        public $acamado;
 	/**
 	 * @AttributeType double
 	 */
-	private $_alturaJoelho;
+        public $alturaJoelho;
 	/**
 	 * @AttributeType double
 	 */
-	private $_larguraPanturrilha;
+        public $larguraPanturrilha;
 	/**
 	 * @AttributeType string
 	 */
-	private $_circunferenciaBraco;
+        public $circunferenciaBraco;
 	/**
 	 * @AttributeType string
 	 */
-	private $_data;
+        public $data;
 	/**
 	 * @AssociationType AvaliacaoNutricionalCLASSES.Paciente
 	 * @AssociationMultiplicity 1
 	 */
-	public $_possui;
+	//public $possui;
 	/**
-	 * @AssociationType AvaliacaoNutricionalCLASSES.MembroAputado
+	 * @AssociationType AvaliacaoNutricionalCLASSES.MembroAmputado
 	 * @AssociationMultiplicity 0..*
 	 */
-	public $_compoe = array();
+	//public $compoe = array();
 
 	/**
 	 * @access public
@@ -107,18 +107,18 @@ class AvaliacaoAntropometrica {
 	 * @ReturnType double
 	 */
 	public function getAltura() {
-		return $this->_altura;
+		return $this->altura;
 	}
 
 	/**
 	 * @access public
-	 * @param double aAltura
+	 * @param double altura
 	 * @return void
-	 * @ParamType aAltura double
+	 * @ParamType altura double
 	 * @ReturnType void
 	 */
-	public function setAltura($aAltura) {
-		$this->_altura = $aAltura;
+	public function setAltura($altura) {
+		$this->altura = $altura;
 	}
 
 	/**
@@ -127,18 +127,18 @@ class AvaliacaoAntropometrica {
 	 * @ReturnType double
 	 */
 	public function getLarguraPanturrilha() {
-		return $this->_larguraPanturrilha;
+		return $this->larguraPanturrilha;
 	}
 
 	/**
 	 * @access public
-	 * @param double aLarguraPanturrilha
+	 * @param double larguraPanturrilha
 	 * @return void
-	 * @ParamType aLarguraPanturrilha double
+	 * @ParamType larguraPanturrilha double
 	 * @ReturnType void
 	 */
-	public function setLarguraPanturrilha($aLarguraPanturrilha) {
-		$this->_larguraPanturrilha = $aLarguraPanturrilha;
+	public function setLarguraPanturrilha($larguraPanturrilha) {
+		$this->larguraPanturrilha = $larguraPanturrilha;
 	}
 
 	/**
@@ -147,18 +147,18 @@ class AvaliacaoAntropometrica {
 	 * @ReturnType double
 	 */
 	public function getPeso() {
-		return $this->_peso;
+		return $this->peso;
 	}
 
 	/**
 	 * @access public
-	 * @param double aPeso
+	 * @param double peso
 	 * @return void
-	 * @ParamType aPeso double
+	 * @ParamType peso double
 	 * @ReturnType void
 	 */
-	public function setPeso($aPeso) {
-		$this->_peso = $aPeso;
+	public function setPeso($peso) {
+		$this->peso = $peso;
 	}
 
 	/**
@@ -167,18 +167,18 @@ class AvaliacaoAntropometrica {
 	 * @ReturnType double
 	 */
 	public function getAlturaJoelho() {
-		return $this->_alturaJoelho;
+		return $this->alturaJoelho;
 	}
 
 	/**
 	 * @access public
-	 * @param double aAlturaJoelho
+	 * @param double alturaJoelho
 	 * @return void
-	 * @ParamType aAlturaJoelho double
+	 * @ParamType alturaJoelho double
 	 * @ReturnType void
 	 */
-	public function setAlturaJoelho($aAlturaJoelho) {
-		$this->_alturaJoelho = $aAlturaJoelho;
+	public function setAlturaJoelho($alturaJoelho) {
+		$this->alturaJoelho = $alturaJoelho;
 	}
 
 	/**
@@ -187,18 +187,18 @@ class AvaliacaoAntropometrica {
 	 * @ReturnType boolean
 	 */
 	public function getAcamado() {
-		return $this->_acamado;
+		return $this->acamado;
 	}
 
 	/**
 	 * @access public
-	 * @param boolean aAcamado
+	 * @param boolean acamado
 	 * @return void
-	 * @ParamType aAcamado boolean
+	 * @ParamType acamado boolean
 	 * @ReturnType void
 	 */
-	public function setAcamado($aAcamado) {
-		$this->_acamado = $aAcamado;
+	public function setAcamado($acamado) {
+		$this->acamado = $acamado;
 	}
 
 	/**
@@ -207,18 +207,18 @@ class AvaliacaoAntropometrica {
 	 * @ReturnType boolean
 	 */
 	public function getAmputado() {
-		return $this->_amputado;
+		return $this->amputado;
 	}
 
 	/**
 	 * @access public
-	 * @param boolean aAmputado
+	 * @param boolean amputado
 	 * @return void
-	 * @ParamType aAmputado boolean
+	 * @ParamType amputado boolean
 	 * @ReturnType void
 	 */
-	public function setAmputado($aAmputado) {
-		$this->_amputado = $aAmputado;
+	public function setAmputado($amputado) {
+		$this->amputado = $amputado;
 	}
 
 	/**
@@ -227,18 +227,18 @@ class AvaliacaoAntropometrica {
 	 * @ReturnType double
 	 */
 	public function getCbAferida() {
-		return $this->_cbAferida;
+		return $this->cbAferida;
 	}
 
 	/**
 	 * @access public
-	 * @param double aCbAferida
+	 * @param double cbAferida
 	 * @return void
-	 * @ParamType aCbAferida double
+	 * @ParamType cbAferida double
 	 * @ReturnType void
 	 */
-	public function setCbAferida($aCbAferida) {
-		$this->_cbAferida = $aCbAferida;
+	public function setCbAferida($cbAferida) {
+		$this->cbAferida = $cbAferida;
 	}
 
 	/**
@@ -247,18 +247,18 @@ class AvaliacaoAntropometrica {
 	 * @ReturnType string
 	 */
 	public function getCbClas() {
-		return $this->_cbClas;
+		return $this->cbClas;
 	}
 
 	/**
 	 * @access public
-	 * @param string aCbClas
+	 * @param string cbClas
 	 * @return void
-	 * @ParamType aCbClas string
+	 * @ParamType cbClas string
 	 * @ReturnType void
 	 */
-	public function setCbClas($aCbClas) {
-		$this->_cbClas = $aCbClas;
+	public function setCbClas($cbClas) {
+		$this->cbClas = $cbClas;
 	}
 
 	/**
@@ -267,18 +267,18 @@ class AvaliacaoAntropometrica {
 	 * @ReturnType string
 	 */
 	public function getData() {
-		return $this->_data;
+		return $this->data;
 	}
 
 	/**
 	 * @access public
-	 * @param string aData
+	 * @param string data
 	 * @return void
-	 * @ParamType aData string
+	 * @ParamType data string
 	 * @ReturnType void
 	 */
-	public function setData($aData) {
-		$this->_data = $aData;
+	public function setData($data) {
+		$this->data = $data;
 	}
 
 	/**
@@ -287,18 +287,18 @@ class AvaliacaoAntropometrica {
 	 * @ReturnType string
 	 */
 	public function getCircunferenciaBraco() {
-		return $this->_circunferenciaBraco;
+		return $this->circunferenciaBraco;
 	}
 
 	/**
 	 * @access public
-	 * @param string aCircunferenciaBraco
+	 * @param string circunferenciaBraco
 	 * @return void
-	 * @ParamType aCircunferenciaBraco string
+	 * @ParamType circunferenciaBraco string
 	 * @ReturnType void
 	 */
-	public function setCircunferenciaBraco($aCircunferenciaBraco) {
-		$this->_circunferenciaBraco = $aCircunferenciaBraco;
+	public function setCircunferenciaBraco($circunferenciaBraco) {
+		$this->circunferenciaBraco = $circunferenciaBraco;
 	}
 }
 ?>

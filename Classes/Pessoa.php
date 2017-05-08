@@ -4,35 +4,35 @@
  * @author Wesley Ferreti
  * @package AvaliacaoNutricionalCLASSES
  */
-abstract class Pessoa {
+abstract class Pessoa{
 	/**
 	 * @AttributeType string
 	 */
-	protected $_email;
+	protected $email;
 	/**
 	 * @AttributeType string
 	 */
-	protected $_cPF;
+	protected $CPF;
 	/**
 	 * @AttributeType boolean
 	 */
-	protected $_sexo;
+	protected $sexo;
 	/**
 	 * @AttributeType string
 	 */
-	protected $_telefoneFixo;
+	protected $telefoneFixo;
 	/**
 	 * @AttributeType string
 	 */
-	protected $_dataNasc;
+	protected $dataNasc;
 	/**
 	 * @AttributeType string
 	 */
-	protected $_telefoneCelular;
+	protected $telefoneCelular;
 	/**
 	 * @AttributeType string
 	 */
-	protected $_nome;
+	protected $nome;
 
 	/**
 	 * @access private
@@ -68,18 +68,18 @@ abstract class Pessoa {
 	 * @ReturnType string
 	 */
 	public function getNome() {
-		return $this->_nome;
+		return $this->nome;
 	}
 
 	/**
 	 * @access public
-	 * @param string aNome
+	 * @param string nome
 	 * @return void
-	 * @ParamType aNome string
+	 * @ParamType nome string
 	 * @ReturnType void
 	 */
-	public function setNome($aNome) {
-		$this->_nome = $aNome;
+	public function setNome($nome) {
+		$this->nome = $nome;
 	}
 
 	/**
@@ -88,18 +88,18 @@ abstract class Pessoa {
 	 * @ReturnType string
 	 */
 	public function getTelefoneFixo() {
-		return $this->_telefoneFixo;
+		return $this->telefoneFixo;
 	}
 
 	/**
 	 * @access public
-	 * @param string aTelefoneFixo
+	 * @param string telefoneFixo
 	 * @return void
-	 * @ParamType aTelefoneFixo string
+	 * @ParamType telefoneFixo string
 	 * @ReturnType void
 	 */
-	public function setTelefoneFixo($aTelefoneFixo) {
-		$this->_telefoneFixo = $aTelefoneFixo;
+	public function setTelefoneFixo($telefoneFixo) {
+		$this->telefoneFixo = $telefoneFixo;
 	}
 
 	/**
@@ -108,18 +108,18 @@ abstract class Pessoa {
 	 * @ReturnType string
 	 */
 	public function getTelefoneCelular() {
-		return $this->_telefoneCelular;
+		return $this->telefoneCelular;
 	}
 
 	/**
 	 * @access public
-	 * @param string aTelefoneCelular
+	 * @param string telefoneCelular
 	 * @return void
-	 * @ParamType aTelefoneCelular string
+	 * @ParamType telefoneCelular string
 	 * @ReturnType void
 	 */
-	public function setTelefoneCelular($aTelefoneCelular) {
-		$this->_telefoneCelular = $aTelefoneCelular;
+	public function setTelefoneCelular($telefoneCelular) {
+		$this->telefoneCelular = $telefoneCelular;
 	}
 
 	/**
@@ -128,18 +128,18 @@ abstract class Pessoa {
 	 * @ReturnType string
 	 */
 	public function getCPF() {
-		return $this->_cPF;
+		return $this->CPF;
 	}
 
 	/**
 	 * @access public
-	 * @param string aCPF
+	 * @param string CPF
 	 * @return void
-	 * @ParamType aCPF string
+	 * @ParamType CPF string
 	 * @ReturnType void
 	 */
-	public function setCPF($aCPF) {
-		$this->_cPF = $aCPF;
+	public function setCPF($CPF) {
+		$this->CPF = $CPF;
 	}
 
 	/**
@@ -148,18 +148,18 @@ abstract class Pessoa {
 	 * @ReturnType string
 	 */
 	public function getEmail() {
-		return $this->_email;
+		return $this->email;
 	}
 
 	/**
 	 * @access public
-	 * @param string aEmail
+	 * @param string email
 	 * @return void
-	 * @ParamType aEmail string
+	 * @ParamType email string
 	 * @ReturnType void
 	 */
-	public function setEmail($aEmail) {
-		$this->_email = $aEmail;
+	public function setEmail($email) {
+		$this->email = $email;
 	}
 
 	/**
@@ -168,18 +168,18 @@ abstract class Pessoa {
 	 * @ReturnType boolean
 	 */
 	public function getSexo() {
-		return $this->_sexo;
+		return $this->sexo;
 	}
 
 	/**
 	 * @access public
-	 * @param boolean aSexo
+	 * @param boolean sexo
 	 * @return void
-	 * @ParamType aSexo boolean
+	 * @ParamType sexo boolean
 	 * @ReturnType void
 	 */
-	public function setSexo($aSexo) {
-		$this->_sexo = $aSexo;
+	public function setSexo($sexo) {
+		$this->sexo = $sexo;
 	}
 
 	/**
@@ -188,18 +188,18 @@ abstract class Pessoa {
 	 * @ReturnType string
 	 */
 	public function getDataNasc() {
-		return $this->_dataNasc;
+		return $this->dataNasc;
 	}
 
 	/**
 	 * @access public
-	 * @param string aDataNasc
+	 * @param string dataNasc
 	 * @return void
-	 * @ParamType aDataNasc string
+	 * @ParamType dataNasc string
 	 * @ReturnType void
 	 */
-	public function setDataNasc($aDataNasc) {
-		$this->_dataNasc = $aDataNasc;
+	public function setDataNasc($dataNasc) {
+		$this->dataNasc = $dataNasc;
 	}
 }
 ?>

@@ -1,5 +1,5 @@
 <?php
-require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Paciente.php');
+//require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Paciente.php');
 
 /**
  * @access public
@@ -10,16 +10,16 @@ class CorPele {
 	/**
 	 * @AttributeType string
 	 */
-	private $_cor;
+        public $cor;
 	/**
 	 * @AttributeType string
 	 */
-	private $_descricao;
+        public $descricao;
 	/**
 	 * @AssociationType AvaliacaoNutricionalCLASSES.Paciente
 	 * @AssociationMultiplicity 0..*
 	 */
-	public $_tem = array();
+	//public $tem = array();
 
 	/**
 	 * @access public
@@ -51,13 +51,13 @@ class CorPele {
 
 	/**
 	 * @access public
-	 * @param string aDescricao
+	 * @param string descricao
 	 * @return void
-	 * @ParamType aDescricao string
+	 * @ParamType descricao string
 	 * @ReturnType void
 	 */
-	public function setDescricao($aDescricao) {
-		$this->_descricao = $aDescricao;
+	public function setDescricao($descricao) {
+		$this->descricao = $descricao;
 	}
 
 	/**
@@ -66,7 +66,7 @@ class CorPele {
 	 * @ReturnType string
 	 */
 	public function getDescricao() {
-		return $this->_descricao;
+		return $this->descricao;
 	}
 
 	/**
@@ -75,18 +75,18 @@ class CorPele {
 	 * @ReturnType string
 	 */
 	public function getCor() {
-		return $this->_cor;
+		return $this->cor;
 	}
 
 	/**
 	 * @access public
-	 * @param string aCor
+	 * @param string cor
 	 * @return void
-	 * @ParamType aCor string
+	 * @ParamType cor string
 	 * @ReturnType void
 	 */
-	public function setCor($aCor) {
-		$this->_cor = $aCor;
+	public function setCor($cor) {
+		$this->cor = $cor;
 	}
 }
 ?>

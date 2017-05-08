@@ -1,7 +1,7 @@
 <?php
-require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Paciente.php');
-require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Nutricionista.php');
-require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Dieta.php');
+//require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Paciente.php');
+//require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Nutricionista.php');
+//require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Dieta.php');
 
 /**
  * @access public
@@ -12,30 +12,30 @@ class PrescricaoDietetica {
 	/**
 	 * @AttributeType string
 	 */
-	private $_data;
+	public $data;
 	/**
 	 * @AttributeType string
 	 */
-	private $_metaCalorica;
+	public $metaCalorica;
 	/**
 	 * @AttributeType string
 	 */
-	private $_metaProteica;
+	public $metaProteica;
 	/**
 	 * @AssociationType AvaliacaoNutricionalCLASSES.Paciente
 	 * @AssociationMultiplicity 1
 	 */
-	public $_possui;
+	//public $possui;
 	/**
 	 * @AssociationType AvaliacaoNutricionalCLASSES.Nutricionista
 	 * @AssociationMultiplicity 1
 	 */
-	public $_faz;
+	//public $faz;
 	/**
 	 * @AssociationType AvaliacaoNutricionalCLASSES.Dieta
 	 * @AssociationMultiplicity 1..*
 	 */
-	public $_tem = array();
+	//public $tem = array();
 
 	/**
 	 * @access public
@@ -102,12 +102,12 @@ class PrescricaoDietetica {
 
 	/**
 	 * @access public
-	 * @param aData
+	 * @param data
 	 * @return void
 	 * 
 	 * @ReturnType void
 	 */
-	public function setData($aData) {
+	public function setData($data) {
 		// Not yet implemented
 	}
 
@@ -117,18 +117,18 @@ class PrescricaoDietetica {
 	 * @ReturnType string
 	 */
 	public function getMetaCalorica() {
-		return $this->_metaCalorica;
+		return $this->metaCalorica;
 	}
 
 	/**
 	 * @access public
-	 * @param string aMetaCalorica
+	 * @param string metaCalorica
 	 * @return void
-	 * @ParamType aMetaCalorica string
+	 * @ParamType metaCalorica string
 	 * @ReturnType void
 	 */
-	public function setMetaCalorica($aMetaCalorica) {
-		$this->_metaCalorica = $aMetaCalorica;
+	public function setMetaCalorica($metaCalorica) {
+		$this->metaCalorica = $metaCalorica;
 	}
 
 	/**
@@ -137,18 +137,18 @@ class PrescricaoDietetica {
 	 * @ReturnType string
 	 */
 	public function getMetaProteica() {
-		return $this->_metaProteica;
+		return $this->metaProteica;
 	}
 
 	/**
 	 * @access public
-	 * @param string aMetaProteica
+	 * @param string metaProteica
 	 * @return void
-	 * @ParamType aMetaProteica string
+	 * @ParamType metaProteica string
 	 * @ReturnType void
 	 */
-	public function setMetaProteica($aMetaProteica) {
-		$this->_metaProteica = $aMetaProteica;
+	public function setMetaProteica($metaProteica) {
+		$this->metaProteica = $metaProteica;
 	}
 }
 ?>

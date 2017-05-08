@@ -1,5 +1,5 @@
 <?php
-require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/FormularioTriagem.php');
+//require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/FormularioTriagem.php');
 
 /**
  * @access public
@@ -10,20 +10,20 @@ class EstadoNutricional {
 	/**
 	 * @AttributeType string
 	 */
-	private $_nome;
+	public $nome;
 	/**
 	 * @AttributeType string
 	 */
-	private $_descricao;
+	public $descricao;
 	/**
 	 * @AttributeType double
 	 */
-	private $_pontuacao;
+	public $pontuacao;
 	/**
 	 * @AssociationType AvaliacaoNutricionalCLASSES.FormularioTriagem
 	 * @AssociationMultiplicity 1
 	 */
-	public $_compoe;
+	//public $compoe;
 
 	/**
 	 * @access public
@@ -59,18 +59,18 @@ class EstadoNutricional {
 	 * @ReturnType string
 	 */
 	public function getNome() {
-		return $this->_nome;
+		return $this->nome;
 	}
 
 	/**
 	 * @access public
-	 * @param string aNome
+	 * @param string nome
 	 * @return void
-	 * @ParamType aNome string
+	 * @ParamType nome string
 	 * @ReturnType void
 	 */
-	public function setNome($aNome) {
-		$this->_nome = $aNome;
+	public function setNome($nome) {
+		$this->nome = $nome;
 	}
 
 	/**
@@ -79,18 +79,18 @@ class EstadoNutricional {
 	 * @ReturnType string
 	 */
 	public function getDescricao() {
-		return $this->_descricao;
+		return $this->descricao;
 	}
 
 	/**
 	 * @access public
-	 * @param string aDescricao
+	 * @param string descricao
 	 * @return void
-	 * @ParamType aDescricao string
+	 * @ParamType descricao string
 	 * @ReturnType void
 	 */
-	public function setDescricao($aDescricao) {
-		$this->_descricao = $aDescricao;
+	public function setDescricao($descricao) {
+		$this->descricao = $descricao;
 	}
 
 	/**
@@ -99,18 +99,18 @@ class EstadoNutricional {
 	 * @ReturnType double
 	 */
 	public function getPontuacao() {
-		return $this->_pontuacao;
+		return $this->pontuacao;
 	}
 
 	/**
 	 * @access public
-	 * @param double aPontuacao
+	 * @param double pontuacao
 	 * @return void
-	 * @ParamType aPontuacao double
+	 * @ParamType pontuacao double
 	 * @ReturnType void
 	 */
-	public function setPontuacao($aPontuacao) {
-		$this->_pontuacao = $aPontuacao;
+	public function setPontuacao($pontuacao) {
+		$this->pontuacao = $pontuacao;
 	}
 }
 ?>

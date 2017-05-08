@@ -1,31 +1,38 @@
 <?php
-require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Refeicao.php');
+//require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Refeicao.php');
 
 /**
  * @access public
  * @author Wesley Ferreti
  * @package AvaliacaoNutricionalCLASSES
  */
-class Adequacao {
+
+class Adequacao{
 	/**
 	 * @AttributeType string
 	 */
-	private $_alimento;
+	public $alimento;
 	/**
 	 * @AttributeType string
 	 */
-	private $_descricao;
+	public $descricao;
 	/**
 	 * @AssociationType AvaliacaoNutricionalCLASSES.Refeicao
 	 * @AssociationMultiplicity 1..*
 	 */
-	public $_possui = array();
+	//public $possui = array();
 
 	/**
 	 * @access public
 	 */
+        public function load(){  
+            
+        }
+        
 	public function Incluir() {
-		// Not yet implemented
+         $db = Database::getInstance();   
+	 $db->doQuery('insert into adequacao(alimento, descricao) values("'.$this->alimento.'", "'.$this->descricao.'")');
+         
 	}
 
 	/**
@@ -55,18 +62,18 @@ class Adequacao {
 	 * @ReturnType string
 	 */
 	public function getAlimento() {
-		return $this->_alimento;
+		return $this->alimento;
 	}
 
 	/**
 	 * @access public
-	 * @param string aAlimento
+	 * @param string alimento
 	 * @return void
-	 * @ParamType aAlimento string
+	 * @ParamType alimento string
 	 * @ReturnType void
 	 */
-	public function setAlimento($aAlimento) {
-		$this->_alimento = $aAlimento;
+	public function setAlimento($alimento) {
+		$this->alimento = $alimento;
 	}
 
 	/**
@@ -75,18 +82,18 @@ class Adequacao {
 	 * @ReturnType string
 	 */
 	public function getDescricao() {
-		return $this->_descricao;
+		return $this->descricao;
 	}
 
 	/**
 	 * @access public
-	 * @param string aDescricao
+	 * @param string descricao
 	 * @return void
-	 * @ParamType aDescricao string
+	 * @ParamType descricao string
 	 * @ReturnType void
 	 */
-	public function setDescricao($aDescricao) {
-		$this->_descricao = $aDescricao;
+	public function setDescricao($descricao) {
+		$this->descricao = $descricao;
 	}
 }
 ?>

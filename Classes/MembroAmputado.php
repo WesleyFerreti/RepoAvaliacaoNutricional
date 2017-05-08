@@ -1,25 +1,25 @@
 <?php
-require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/PrescricaoDietetica.php');
+//require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/AvaliacaoAntropometrica.php');
 
 /**
  * @access public
  * @author Wesley Ferreti
  * @package AvaliacaoNutricionalCLASSES
  */
-class ViaAlimentacao {
+class MembroAmputado {
 	/**
 	 * @AttributeType string
 	 */
-	private $_tipoVia;
+	public $nome;
 	/**
-	 * @AttributeType string
+	 * @AttributeType double
 	 */
-	private $_descricao;
+	public $percentual;
 	/**
-	 * @AssociationType AvaliacaoNutricionalCLASSES.PrescricaoDietetica
+	 * @AssociationType AvaliacaoNutricionalCLASSES.AvaliacaoAntropometrica
 	 * @AssociationMultiplicity 1..*
 	 */
-	public $_tem = array();
+	//public $compoe = array();
 
 	/**
 	 * @access public
@@ -54,39 +54,39 @@ class ViaAlimentacao {
 	 * @return string
 	 * @ReturnType string
 	 */
-	public function getTipoVia() {
-		return $this->_tipoVia;
+	public function getNome() {
+		return $this->nome;
 	}
 
 	/**
 	 * @access public
-	 * @param string aTipoVia
+	 * @param string nome
 	 * @return void
-	 * @ParamType aTipoVia string
+	 * @ParamType nome string
 	 * @ReturnType void
 	 */
-	public function setTipoVia($aTipoVia) {
-		$this->_tipoVia = $aTipoVia;
+	public function setNome($nome) {
+		$this->nome = $nome;
 	}
 
 	/**
 	 * @access public
-	 * @return string
-	 * @ReturnType string
+	 * @return double
+	 * @ReturnType double
 	 */
-	public function getDescricao() {
-		return $this->_descricao;
+	public function getPercentual() {
+		return $this->percentual;
 	}
 
 	/**
 	 * @access public
-	 * @param string aDescricao
+	 * @param double percentual
 	 * @return void
-	 * @ParamType aDescricao string
+	 * @ParamType percentual double
 	 * @ReturnType void
 	 */
-	public function setDescricao($aDescricao) {
-		$this->_descricao = $aDescricao;
+	public function setPercentual($percentual) {
+		$this->percentual = $percentual;
 	}
 }
 ?>

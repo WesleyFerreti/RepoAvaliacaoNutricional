@@ -1,5 +1,5 @@
 <?php
-require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/PrescricaoDietetica.php');
+//require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/PrescricaoDietetica.php');
 
 /**
  * @access public
@@ -10,16 +10,16 @@ class Refeicao {
 	/**
 	 * @AttributeType string
 	 */
-	private $_refeicao;
+	public $refeicao;
 	/**
 	 * @AttributeType string
 	 */
-	private $_descricao;
+	public $descricao;
 	/**
 	 * @AssociationType AvaliacaoNutricionalCLASSES.PrescricaoDietetica
 	 * @AssociationMultiplicity 1..*
 	 */
-	public $_possui = array();
+	//public $possui = array();
 
 	/**
 	 * @access public
@@ -58,12 +58,12 @@ class Refeicao {
 
 	/**
 	 * @access public
-	 * @param aRefeicao
+	 * @param refeicao
 	 * @return void
 	 * 
 	 * @ReturnType void
 	 */
-	public function setRefeicao($aRefeicao) {
+	public function setRefeicao($refeicao) {
 		// Not yet implemented
 	}
 
@@ -73,18 +73,18 @@ class Refeicao {
 	 * @ReturnType string
 	 */
 	public function getDescricao() {
-		return $this->_descricao;
+		return $this->descricao;
 	}
 
 	/**
 	 * @access public
-	 * @param string aDescricao
+	 * @param string descricao
 	 * @return void
-	 * @ParamType aDescricao string
+	 * @ParamType descricao string
 	 * @ReturnType void
 	 */
-	public function setDescricao($aDescricao) {
-		$this->_descricao = $aDescricao;
+	public function setDescricao($descricao) {
+		$this->descricao = $descricao;
 	}
 }
 ?>

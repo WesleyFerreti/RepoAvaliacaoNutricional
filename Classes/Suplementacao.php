@@ -1,5 +1,5 @@
 <?php
-require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Refeicao.php');
+//require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Refeicao.php');
 
 /**
  * @access public
@@ -10,24 +10,24 @@ class Suplementacao {
 	/**
 	 * @AttributeType string
 	 */
-	private $_nomeSuplemento;
+	public $nomeSuplemento;
 	/**
 	 * @AttributeType string
 	 */
-	private $_sabor;
+	public $sabor;
 	/**
 	 * @AttributeType string
 	 */
-	private $_quantidade;
+	public $quantidade;
 	/**
 	 * @AttributeType string
 	 */
-	private $_descricao;
+	public $descricao;
 	/**
 	 * @AssociationType AvaliacaoNutricionalCLASSES.Refeicao
 	 * @AssociationMultiplicity 1..*
 	 */
-	public $_possui = array();
+	//public $possui = array();
 
 	/**
 	 * @access public
@@ -63,18 +63,18 @@ class Suplementacao {
 	 * @ReturnType string
 	 */
 	public function getNomeSuplemento() {
-		return $this->_nomeSuplemento;
+		return $this->nomeSuplemento;
 	}
 
 	/**
 	 * @access public
-	 * @param string aNomeSuplemento
+	 * @param string nomeSuplemento
 	 * @return void
-	 * @ParamType aNomeSuplemento string
+	 * @ParamType nomeSuplemento string
 	 * @ReturnType void
 	 */
-	public function setNomeSuplemento($aNomeSuplemento) {
-		$this->_nomeSuplemento = $aNomeSuplemento;
+	public function setNomeSuplemento($nomeSuplemento) {
+		$this->nomeSuplemento = $nomeSuplemento;
 	}
 
 	/**
@@ -83,18 +83,18 @@ class Suplementacao {
 	 * @ReturnType string
 	 */
 	public function getSabor() {
-		return $this->_sabor;
+		return $this->sabor;
 	}
 
 	/**
 	 * @access public
-	 * @param string aSabor
+	 * @param string sabor
 	 * @return void
-	 * @ParamType aSabor string
+	 * @ParamType sabor string
 	 * @ReturnType void
 	 */
-	public function setSabor($aSabor) {
-		$this->_sabor = $aSabor;
+	public function setSabor($sabor) {
+		$this->sabor = $sabor;
 	}
 
 	/**
@@ -103,18 +103,18 @@ class Suplementacao {
 	 * @ReturnType string
 	 */
 	public function getQuantidade() {
-		return $this->_quantidade;
+		return $this->quantidade;
 	}
 
 	/**
 	 * @access public
-	 * @param string aQuantidade
+	 * @param string quantidade
 	 * @return void
-	 * @ParamType aQuantidade string
+	 * @ParamType quantidade string
 	 * @ReturnType void
 	 */
-	public function setQuantidade($aQuantidade) {
-		$this->_quantidade = $aQuantidade;
+	public function setQuantidade($quantidade) {
+		$this->quantidade = $quantidade;
 	}
 
 	/**
@@ -123,18 +123,18 @@ class Suplementacao {
 	 * @ReturnType string
 	 */
 	public function getDescricao() {
-		return $this->_descricao;
+		return $this->descricao;
 	}
 
 	/**
 	 * @access public
-	 * @param string aDescricao
+	 * @param string descricao
 	 * @return void
-	 * @ParamType aDescricao string
+	 * @ParamType descricao string
 	 * @ReturnType void
 	 */
-	public function setDescricao($aDescricao) {
-		$this->_descricao = $aDescricao;
+	public function setDescricao($descricao) {
+		$this->descricao = $descricao;
 	}
 }
 ?>

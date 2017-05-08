@@ -1,7 +1,7 @@
 <?php
-require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Paciente.php');
-require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/GravidadeDoenca.php');
-require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Nutricionista.php');
+//require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Paciente.php');
+//require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/GravidadeDoenca.php');
+//require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Nutricionista.php');
 
 /**
  * @access public
@@ -13,38 +13,38 @@ class FormularioTriagem {
 	 * @AttributeType int
 	 * Idoso 1; Adulto 2; Crian�a 3; Homem 4; mulher 5;
 	 */
-	private $_faixaEtaria;
+	public $faixaEtaria;
 	/**
 	 * @AttributeType boolean
 	 */
-	private $_inativo;
+	public $inativo;
 	/**
 	 * @AttributeType string
 	 */
-	private $_nome;
+	public $nome;
 	/**
 	 * @AttributeType string
 	 */
-	private $_dataCriacao;
+	public $dataCriacao;
 	/**
 	 * @AttributeType string
 	 */
-	private $_descricao;
+	public $descricao;
 	/**
 	 * @AssociationType AvaliacaoNutricionalCLASSES.Paciente
 	 * @AssociationMultiplicity 1..*
 	 */
-	public $_possui = array();
+	//public $possui = array();
 	/**
 	 * @AssociationType AvaliacaoNutricionalCLASSES.GravidadeDoenca
 	 * @AssociationMultiplicity 1..*
 	 */
-	public $_compoe = array();
+	//public $compoe = array();
 	/**
 	 * @AssociationType AvaliacaoNutricionalCLASSES.Nutricionista
 	 * @AssociationMultiplicity 1
 	 */
-	public $_pertence;
+	//public $pertence;
 
 	/**
 	 * @access public
@@ -101,18 +101,18 @@ class FormularioTriagem {
 	 * @ReturnType int
 	 */
 	public function getFaixaEtaria() {
-		return $this->_faixaEtaria;
+		return $this->faixaEtaria;
 	}
 
 	/**
 	 * @access public
-	 * @param int aFaixaEtaria
+	 * @param int faixaEtaria
 	 * @return void
-	 * @ParamType aFaixaEtaria int
+	 * @ParamType faixaEtaria int
 	 * @ReturnType void
 	 */
-	public function setFaixaEtaria($aFaixaEtaria) {
-		$this->_faixaEtaria = $aFaixaEtaria;
+	public function setFaixaEtaria($faixaEtaria) {
+		$this->faixaEtaria = $faixaEtaria;
 	}
 
 	/**
@@ -121,18 +121,18 @@ class FormularioTriagem {
 	 * @ReturnType boolean
 	 */
 	public function getInativo() {
-		return $this->_inativo;
+		return $this->inativo;
 	}
 
 	/**
 	 * @access public
-	 * @param boolean aInativo
+	 * @param boolean inativo
 	 * @return void
-	 * @ParamType aInativo boolean
+	 * @ParamType inativo boolean
 	 * @ReturnType void
 	 */
-	public function setInativo($aInativo) {
-		$this->_inativo = $aInativo;
+	public function setInativo($inativo) {
+		$this->inativo = $inativo;
 	}
 
 	/**
@@ -141,18 +141,18 @@ class FormularioTriagem {
 	 * @ReturnType string
 	 */
 	public function getNome() {
-		return $this->_nome;
+		return $this->nome;
 	}
 
 	/**
 	 * @access public
-	 * @param string aNome
+	 * @param string nome
 	 * @return void
-	 * @ParamType aNome string
+	 * @ParamType nome string
 	 * @ReturnType void
 	 */
-	public function setNome($aNome) {
-		$this->_nome = $aNome;
+	public function setNome($nome) {
+		$this->nome = $nome;
 	}
 
 	/**
@@ -161,18 +161,18 @@ class FormularioTriagem {
 	 * @ReturnType string
 	 */
 	public function getDataCriacao() {
-		return $this->_dataCriacao;
+		return $this->dataCriacao;
 	}
 
 	/**
 	 * @access public
-	 * @param string aDataCriacao
+	 * @param string dataCriacao
 	 * @return void
-	 * @ParamType aDataCriacao string
+	 * @ParamType dataCriacao string
 	 * @ReturnType void
 	 */
-	public function setDataCriacao($aDataCriacao) {
-		$this->_dataCriacao = $aDataCriacao;
+	public function setDataCriacao($dataCriacao) {
+		$this->dataCriacao = $dataCriacao;
 	}
 
 	/**
@@ -181,18 +181,18 @@ class FormularioTriagem {
 	 * @ReturnType string
 	 */
 	public function getDescricao() {
-		return $this->_descricao;
+		return $this->descricao;
 	}
 
 	/**
 	 * @access public
-	 * @param string aDescricao
+	 * @param string descricao
 	 * @return void
-	 * @ParamType aDescricao string
+	 * @ParamType descricao string
 	 * @ReturnType void
 	 */
-	public function setDescricao($aDescricao) {
-		$this->_descricao = $aDescricao;
+	public function setDescricao($descricao) {
+		$this->descricao = $descricao;
 	}
 }
 ?>

@@ -1,5 +1,5 @@
 <?php
-require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Paciente.php');
+//require_once(realpath(dirname(__FILE__)) . '/../AvaliacaoNutricionalCLASSES/Paciente.php');
 
 /**
  * @access public
@@ -10,32 +10,32 @@ class Endereco {
 	/**
 	 * @AttributeType string
 	 */
-	private $_rua;
+	public $rua;
 	/**
 	 * @AttributeType string
 	 */
-	private $_cEP;
+	public $CEP;
 	/**
 	 * @AttributeType int
 	 */
-	private $_numero;
+	public $numero;
 	/**
 	 * @AttributeType string
 	 */
-	private $_complemento;
+	public $complemento;
 	/**
 	 * @AttributeType string
 	 */
-	private $_cidade;
+	public $cidade;
 	/**
 	 * @AttributeType string
 	 */
-	private $_bairro;
+	public $bairro;
 	/**
 	 * @AssociationType AvaliacaoNutricionalCLASSES.Paciente
 	 * @AssociationMultiplicity 1..*
 	 */
-	public $_possui = array();
+	//public $possui = array();
 
 	/**
 	 * @access public
@@ -71,18 +71,18 @@ class Endereco {
 	 * @ReturnType string
 	 */
 	public function getRua() {
-		return $this->_rua;
+		return $this->rua;
 	}
 
 	/**
 	 * @access public
-	 * @param string aRua
+	 * @param string rua
 	 * @return void
-	 * @ParamType aRua string
+	 * @ParamType rua string
 	 * @ReturnType void
 	 */
-	public function setRua($aRua) {
-		$this->_rua = $aRua;
+	public function setRua($rua) {
+		$this->rua = $rua;
 	}
 
 	/**
@@ -91,18 +91,18 @@ class Endereco {
 	 * @ReturnType string
 	 */
 	public function getCEP() {
-		return $this->_cEP;
+		return $this->CEP;
 	}
 
 	/**
 	 * @access public
-	 * @param string aCEP
+	 * @param string CEP
 	 * @return void
-	 * @ParamType aCEP string
+	 * @ParamType CEP string
 	 * @ReturnType void
 	 */
-	public function setCEP($aCEP) {
-		$this->_cEP = $aCEP;
+	public function setCEP($CEP) {
+		$this->CEP = $CEP;
 	}
 
 	/**
@@ -111,18 +111,18 @@ class Endereco {
 	 * @ReturnType int
 	 */
 	public function getNumero() {
-		return $this->_numero;
+		return $this->numero;
 	}
 
 	/**
 	 * @access public
-	 * @param int aNumero
+	 * @param int numero
 	 * @return void
-	 * @ParamType aNumero int
+	 * @ParamType numero int
 	 * @ReturnType void
 	 */
-	public function setNumero($aNumero) {
-		$this->_numero = $aNumero;
+	public function setNumero($numero) {
+		$this->numero = $numero;
 	}
 
 	/**
@@ -131,18 +131,18 @@ class Endereco {
 	 * @ReturnType string
 	 */
 	public function getComplemento() {
-		return $this->_complemento;
+		return $this->complemento;
 	}
 
 	/**
 	 * @access public
-	 * @param string aComplemento
+	 * @param string complemento
 	 * @return void
-	 * @ParamType aComplemento string
+	 * @ParamType complemento string
 	 * @ReturnType void
 	 */
-	public function setComplemento($aComplemento) {
-		$this->_complemento = $aComplemento;
+	public function setComplemento($complemento) {
+		$this->complemento = $complemento;
 	}
 
 	/**
@@ -151,18 +151,18 @@ class Endereco {
 	 * @ReturnType string
 	 */
 	public function getCidade() {
-		return $this->_cidade;
+		return $this->cidade;
 	}
 
 	/**
 	 * @access public
-	 * @param string aCidade
+	 * @param string cidade
 	 * @return void
-	 * @ParamType aCidade string
+	 * @ParamType cidade string
 	 * @ReturnType void
 	 */
-	public function setCidade($aCidade) {
-		$this->_cidade = $aCidade;
+	public function setCidade($cidade) {
+		$this->cidade = $cidade;
 	}
 
 	/**
@@ -171,18 +171,18 @@ class Endereco {
 	 * @ReturnType string
 	 */
 	public function getBairro() {
-		return $this->_bairro;
+		return $this->bairro;
 	}
 
 	/**
 	 * @access public
-	 * @param string aBairro
+	 * @param string bairro
 	 * @return void
-	 * @ParamType aBairro string
+	 * @ParamType bairro string
 	 * @ReturnType void
 	 */
-	public function setBairro($aBairro) {
-		$this->_bairro = $aBairro;
+	public function setBairro($bairro) {
+		$this->bairro = $bairro;
 	}
 }
 ?>
